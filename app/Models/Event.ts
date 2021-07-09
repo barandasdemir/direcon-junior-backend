@@ -11,6 +11,12 @@ export default class Event extends BaseModel {
   @column()
   public event: string
 
+  @column()
+  public userAgent: string
+
+  @column({ serializeAs: null })
+  public ip: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
